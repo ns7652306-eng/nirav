@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Flower</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fff0f6, #e0f2fe);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .flower-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .flower {
+            font-size: 130px;
+            margin: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        h2 {
+            color: #db2777;
+            margin-bottom: 15px;
+        }
+
+        #description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background: #fdf2f8;
+            padding: 20px;
+            border-radius: 12px;
+            width: 200px;
+        }
+
+        .feature h3 {
+            color: #8b5cf6;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌸 AI Flower</h1>
+        <p>Explore the beauty of flowers with Artificial Intelligence</p>
+    </header>
+
+    <div class="container">
+
+        <div class="flower-card">
+
+            <div class="flower" id="flower">🌸</div>
+
+            <h2 id="flowerName">AI Blossom</h2>
+
+            <p id="description">
+                This beautiful flower is imagined by Artificial Intelligence.
+                It represents creativity, technology, and the beauty of nature.
+            </p>
+
+            <button onclick="generateFlower()">
+                ✨ Generate AI Flower
+            </button>
+
+            <div class="features">
+
+                <div class="feature">
+                    <h3>🤖 AI</h3>
+                    <p>Created using AI concepts.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🌱 Nature</h3>
+                    <p>Inspired by natural flowers.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>🎨 Creative</h3>
+                    <p>Combines technology and creativity.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 AI Flower | Web Development Practical</p>
+    </footer>
+
+    <script>
+
+        const flowers = [
+            {
+                emoji: "🌸",
+                name: "AI Blossom",
+                description: "A soft pink flower symbolizing creativity, kindness, and new ideas."
+            },
+            {
+                emoji: "🌹",
+                name: "AI Rose",
+                description: "An intelligent rose representing beauty, love, and advanced technology."
+            },
+            {
+                emoji: "🌻",
+                name: "AI Sunflower",
+                description: "A bright sunflower representing happiness, energy, and artificial intelligence."
+            },
+            {
+                emoji: "🌷",
+                name: "AI Tulip",
+                description: "A colorful AI tulip representing innovation, simplicity, and elegance."
+            },
+            {
+                emoji: "🌺",
+                name: "AI Hibiscus",
+                description: "A vibrant flower representing imagination, creativity, and digital art."
+            }
+        ];
+
+        function generateFlower() {
+
+            const randomIndex =
+                Math.floor(Math.random() * flowers.length);
+
+            const flower = flowers[randomIndex];
+
+            document.getElementById("flower").textContent =
+                flower.emoji;
+
+            document.getElementById("flowerName").textContent =
+                flower.name;
+
+            document.getElementById("description").textContent =
+                flower.description;
+        }
+
+    </script>
+
+</body>
+</html>
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
